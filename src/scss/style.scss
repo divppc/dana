@@ -1,0 +1,739 @@
+@import "partials/_fonts";
+@import "normalize";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  width: 100%;
+}
+
+.container {
+  max-width: $container-width;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (min-width: $desktop) {
+    padding: 0 72px;
+  }
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: inherit;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+button {
+  padding: 0;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font-weight: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.cover-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header {
+  padding: 30px 0;
+  position: relative;
+  box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.35);
+
+  @media (min-width: $laptop) {
+    padding: 76px 0 72px 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .join {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+    border: 3px solid #1b232a;
+
+    @media (min-width: $laptop) {
+      padding: 20px 81px;
+      font-size: 36px;
+    }
+
+    &:hover {
+      color: #fff;
+      background-color: #1b232a;
+    }
+  }
+
+  .logo {
+    max-width: 50px;
+    display: block;
+
+    @media (min-width: $laptop) {
+      max-width: 95px;
+    }
+  }
+
+  .centered-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: -3px;
+
+    p {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 0.9;
+
+      @media (min-width: $tablet) {
+        font-size: 36px;
+      }
+
+      @media (min-width: $laptop) {
+        font-size: 72px;
+      }
+    }
+
+    span {
+      font-weight: 400;
+      font-size: 14px;
+
+      @media (min-width: $tablet) {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+section.main {
+  background: url("../images/amid-bg.png") no-repeat center / cover;
+
+  h1 {
+    color: #1b232a;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 35px;
+
+    @media (min-width: $laptop) {
+      font-size: 60px;
+      margin-bottom: 45px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-bottom: 65px;
+    }
+
+    span {
+      margin-left: 10px;
+      display: inline-block;
+      border-bottom: 2px solid #1b232a;
+    }
+  }
+
+  .main-content {
+    padding: 100px 0;
+
+    @media (min-width: $laptop) {
+      padding: 310px 0 400px 0;
+    }
+  }
+
+  form {
+    .step {
+      text-align: center;
+      display: none;
+
+      &.active {
+        display: block;
+
+        @media (min-width: $tablet) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .row {
+      @media (min-width: $mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        width: 250px;
+        margin: 10px auto 0;
+
+        @media (min-width: $mobile) {
+          width: auto;
+          margin: 0;
+        }
+      }
+
+      &:first-child {
+        margin-bottom: 10px;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 0;
+          margin-right: 25px;
+        }
+      }
+    }
+
+    input.date {
+      @media (min-width: $laptop) {
+        input {
+          width: 195px;
+          text-align: center;
+        }
+      }
+    }
+
+    input.service {
+      @media (min-width: $laptop) {
+        input {
+          width: 393px;
+        }
+      }
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      border-radius: 15px;
+      background-color: rgb(27, 35, 42);
+      opacity: 0.702;
+      height: 60px;
+      border: none;
+      outline: none;
+      padding: 0 30px;
+      color: #fff;
+      font-size: 22px;
+
+      @media (min-width: $laptop) {
+        height: 100px;
+        font-size: 30px;
+      }
+
+      &::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.502);
+        font-size: 22px;
+        line-height: 1.2;
+
+        @media (min-width: $laptop) {
+          font-size: 30px;
+        }
+      }
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 28px;
+      flex-shrink: 0;
+      min-width: 150px;
+      padding-right: 10px;
+
+      @media (min-width: $laptop) {
+        font-size: 48px;
+        padding-right: 25px;
+      }
+    }
+
+    button {
+      flex-shrink: 0;
+      margin-left: 10px;
+      max-width: 50px;
+
+      @media (min-width: $tablet) {
+        max-width: 78px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .with-submit {
+    .row {
+      display: block;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+
+        @media (min-width: $tablet) {
+          width: auto;
+          margin-top: 0;
+        }
+      }
+    }
+
+    input {
+      width: 220px;
+      padding: 0 20px;
+
+      @media (min-width: $tablet) {
+        width: 340px;
+        padding: 0 30px;
+      }
+    }
+  }
+
+  .advantages {
+    padding-bottom: 30px;
+
+    @media (min-width: $laptop) {
+      padding-bottom: 70px;
+    }
+
+    ul {
+      max-width: 1440px;
+      margin: 0 auto;
+
+      @media (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    li {
+      font-weight: 600;
+      font-size: 30px;
+      padding: 10px 0;
+      line-height: 1.2;
+      text-align: center;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+        border-bottom: 2px solid #5f6a72;
+
+        @media (min-width: $tablet) {
+          margin-bottom: 0;
+          border-bottom: none;
+
+          &:after {
+            display: block;
+            content: "";
+            width: 2px;
+            height: 90px;
+            background: #5f6a72;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      @media (min-width: $tablet) {
+        width: 33%;
+        padding: 10px 2.2%;
+        text-align: left;
+      }
+
+      @media (min-width: $desktop) {
+        padding: 15px 4%;
+      }
+    }
+  }
+}
+
+section.feedback {
+  padding: 30px 0 0 0;
+
+  @media (min-width: $laptop) {
+    padding: 70px 0 0 0;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    border-color: rgb(27, 35, 42);
+    border-radius: 30px;
+    background-color: rgb(27, 35, 42);
+    box-shadow: 0px 6px 35px 0px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @media (min-width: $laptop) {
+      padding: 12% 4%;
+    }
+
+    @media (min-width: $laptop) {
+      width: calc(50% - 20px);
+    }
+
+    @media (min-width: $desktop) {
+      width: calc(50% - 35px);
+      margin-bottom: 70px;
+    }
+
+    p {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 30px;
+      line-height: 1.2;
+
+      @media (min-width: $laptop) {
+        font-size: 36px;
+        margin-bottom: 55px;
+      }
+    }
+
+    .name {
+      font-weight: 700;
+      color: #fff;
+      font-size: 28px;
+
+      @media (min-width: $laptop) {
+        font-size: 36px;
+      }
+    }
+
+    .author {
+      line-height: 1.2;
+
+      @media (min-width: $desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .role {
+      font-style: italic;
+      color: #828a8f;
+      font-size: 22px;
+      padding-left: 20px;
+
+      @media (min-width: $laptop) {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 50px 0;
+
+  @media (min-width: $tablet) {
+    padding: 100px 0;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 200px 0;
+  }
+
+  @media (min-width: $desktop) {
+    padding: 400px 0;
+  }
+
+  h3 {
+    font-weight: 700;
+    font-size: 36px;
+    color: #1b232a;
+
+    @media (min-width: $tablet) {
+      font-size: 48px;
+    }
+
+    @media (min-width: $laptop) {
+      font-size: 60px;
+    }
+  }
+
+  .footer-line {
+    margin-top: 40px;
+
+    @media (min-width: $laptop) {
+      margin-top: 90px;
+    }
+  }
+
+  .copyright {
+    color: #1b232a;
+    font-size: 24px;
+
+    b {
+      font-size: 30px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 10px;
+
+      @media (min-width: $mobile) {
+        display: inline;
+        margin: 0;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  nav {
+    margin-top: 35px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      max-width: 360px;
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    a {
+      font-weight: 700;
+      font-size: 24px;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+header.inner {
+  background: #1b232a;
+  color: #fff;
+  text-align: center;
+
+  .container {
+    position: relative;
+  }
+
+  a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    max-width: 20px;
+
+    @media (min-width: $desktop) {
+      left: 72px;
+      max-width: 30px;
+    }
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+
+    @media (min-width: $laptop) {
+      font-size: 60px;
+    }
+  }
+}
+
+section.txt {
+  padding: 80px 0 20px 0;
+  text-align: center;
+  line-height: 1.667;
+  font-size: 24px;
+  color: rgb(27, 35, 42);
+
+  @media (min-width: $tablet) {
+    padding: 120px 0 20px 0;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 200px 0 20px 0;
+    font-size: 36px;
+  }
+
+  p {
+    max-width: 1105px;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+
+      @media (min-width: $laptop) {
+        margin-bottom: 65px;
+      }
+    }
+  }
+}
+
+section.about {
+  padding: 50px 0;
+
+  @media (min-width: $laptop) {
+    padding: 170px 0 75px 0;
+  }
+
+  .tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  .tabs {
+    border-radius: 30px;
+    background-color: rgb(27, 35, 42);
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    padding: 30px;
+
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: flex-start;
+      padding: 50px;
+    }
+
+    @media (min-width: $desktop) {
+      padding: 75px;
+    }
+  }
+
+  .tabs-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-size: 28px;
+    justify-content: center;
+
+    @media (min-width: $tablet) {
+      flex-wrap: wrap;
+      min-width: 33%;
+      font-size: 36px;
+      justify-content: flex-start;
+      margin: 0;
+      margin-right: 40px;
+    }
+
+    @media (min-width: $laptop) {
+      margin-right: 80px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-right: 130px;
+    }
+
+    li {
+      width: 100%;
+
+      &:not(:last-child) {
+        @media (min-width: $tablet) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+
+      @media (min-width: $tablet) {
+        padding: 23px 0;
+      }
+
+      &:hover,
+      &.active {
+        background: #5f6a72;
+      }
+    }
+  }
+
+  .tabs-body {
+    width: 100%;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 2;
+
+    @media (min-width: $tablet) {
+      font-size: 30px;
+    }
+
+    ul {
+      @media (min-width: 1650px) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 500px;
+        overflow: hidden;
+      }
+
+      &:after {
+        display: block;
+        content: "";
+        height: 100%;
+        width: 100%;
+        flex-shrink: 1;
+      }
+
+      li {
+        margin-right: 50px;
+        max-width: 100%;
+      }
+    }
+  }
+}
