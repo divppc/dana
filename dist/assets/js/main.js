@@ -23,21 +23,32 @@ window.addEventListener("load", function() {
   const steps = Array.from(document.querySelectorAll("form .step"));
   const serviceInput = document.querySelector("input.service");
   const dateInput = document.querySelector("input.date");
-
-  console.log(firstStepInputs);
+  const firstInput = document.querySelector(".row:first-child input");
+  const rightBtn = document.querySelector(".next-btn");
+  firstInput.focus();
 
   for (var i = 0; i < firstStepInputs.length; i++) {
-    firstStepInputs[i].addEventListener("keypress", e => {
-      if (
-        e.keyCode == 13 &&
-        !!serviceInput.value.length &&
-        !!dateInput.value.length
-      ) {
-        clearClasses(steps);
-        document.querySelector(".step.with-submit").classList.add("active");
+    firstStepInputs[i].addEventListener("input", e => {
+      if (!!serviceInput.value.length && !!dateInput.value.length) {
+        rightBtn.classList.add("active");
+      } else {
+        rightBtn.classList.remove("active");
       }
     });
   }
+
+  for (var i = 0; i < firstStepInputs.length; i++) {
+    firstStepInputs[i].addEventListener("keypress", e => {
+      if (e.keyCode == 13) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  rightBtn.addEventListener("click", () => {
+    clearClasses(steps);
+    document.querySelector(".step.with-submit").classList.add("active");
+  });
 
   var elements = document.getElementsByClassName("form");
   for (var i = 0; i < elements.length; i++) {

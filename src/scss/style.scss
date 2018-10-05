@@ -216,7 +216,7 @@ section.main {
         }
       }
 
-      &:first-child {
+      &:not(:last-child) {
         margin-bottom: 10px;
 
         @media (min-width: $tablet) {
@@ -735,5 +735,16 @@ section.about {
         max-width: 100%;
       }
     }
+  }
+}
+
+.next-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }
