@@ -48,6 +48,7 @@ window.addEventListener("load", function() {
   rightBtn.addEventListener("click", () => {
     clearClasses(steps);
     document.querySelector(".step.with-submit").classList.add("active");
+    document.querySelector(".with-submit input").focus();
   });
 
   var elements = document.getElementsByClassName("form");

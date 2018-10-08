@@ -1,5 +1,5 @@
 <?php
-    $to = 'okal.ihor@gmail.com';
+    $to = 'amid@amidslim.com';
     $subject = "Form " .$_SERVER['HTTP_REFERER'];
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type: text; charset=utf-8" . "\r\n";
