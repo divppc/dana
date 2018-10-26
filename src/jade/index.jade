@@ -4,100 +4,37 @@ html(lang="en")
   meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
   meta(charset="UTF-8")
   link(rel="stylesheet" href="assets/css/style.css")
-  link(rel="shortcut icon" href="assets/images/favicon.ico")
-  title Main | Amid
+  link(rel="shortcut icon" href="favicon.ico")
+  title Main | TAGROUGE
   body
     header
       .container
         nav
-          .logo
-            a(href="#")
-              img(src="assets/images/amid-logo.png", alt="")
-            .centered-logo
-              p Amid
-              span Freelance Services & Project Management
-          a.join(href="/join.html") Join
-    section.main
-      .container
-        .main-content
-          h1 10% Honest Commission
-            span No Hidden Fees
-          form.form
-            .step.first.active
-              .row
-                span I need
-                div
-                  input(type="text" placeholder="a website" required class="service" name="service")
-              .row
-                span done by
-                div
-                  input(type="text" placeholder="dd/mm" required class="date" name="date")
-              .row
-                .next-btn
-                  img(src="assets/images/submit.png", alt="")
-            .step.with-submit
-              .row
-                span My phone number is
-                div
-                  input(type="text" required placeholder="Type your number" class="phone" name="phone")
-                  button(type="submit")
-                    img(src="assets/images/submit.png", alt="")
-            .step.finish
-              .row
-                span Success. You will receive a phone call shortly.
-        .advantages
-          ul
-            li.
-              Hire me for your next  freelance project.
-            li.
-              I’m here to remove barriers and do the heavy lifitng.
-            li.
-              While you focus on what you’re best at.
-    section.feedback
-      .container
-        ul
-          li
-            p.
-              I’ve known Amid for over 5 years. I was one
-              of the first freelancers he’s ever hired for
-              a logo design project and you could just 
-              sense that passion he has for design.
-            .author
-              .name Jum Vencilaco
-              .role Graphic Designer
-          li
-            p.
-              I have worked with Amid on several 
-              web projects. He’s highly knowledgable
-              with such a fresh-eyed vision and a 
-              whole lot of experience.
-            .author
-              .name Ihor Okal
-              .role Front-end Developer
-          li
-            p.
-               I had the pleasure of working alongside Amid on several projects. He is a strong creative visionary. It's always inspiring to see what he comes up with.
-            .author
-              .name Jessica Stafford
-              .role Content Strategist & Marketer
-          li
-            p.
-               I was recently interviewed by Amid for English to French translations. His energy is contagious and I look forward to working with him on future projects. 
-            .author
-              .name Tatiana Navarro
-              .role English/French Translator
-    footer
-      .container
-        .wrapper
-          h3 Invested in Myself.. and Your Success
-          .footer-line
-            .copyright <b>© 2018 Amid Slim</b>  All rights reserved.
-            nav
-              ul
-                li
-                  a(href="/about.html") About
-                li
-                  a(href="/policy.html") Privacy
-                li
-                  a(href="mailto:amid@amidslim.com") Contact
-    script(src="assets/js/main.js")
+          .left-nav
+            a(href="" title="Contacts").contacts
+              img(src="assets/images/contacts-icon.svg" alt="Contacts")
+            a(href="" title="Stores").stores
+              img(src="assets/images/location-icon.svg" alt="Location")
+          .right-nav
+            a(href="" title="Share").share
+              img(src="assets/images/share-icon.svg" alt="Share")
+        .logo
+          a(href="")
+            img(src="assets/images/tagrouge-logo.svg" alt="Tagrouge")
+    main
+      section.category-filter
+        .container
+          nav
+            ul
+              li
+                a(href="#" class="active") All
+              li
+                a(href="#") Jackets
+              li
+                a(href="#") Footwear
+              li
+                a(href="#") Bags
+              li
+                a(href="#") Accessories
+
+      
