@@ -1,9 +1,11 @@
 {
-  "name": "tagrouge",
+  "name": "dana-gifts",
   "version": "1.0.0",
-  "description": "Amid Salim - personal website",
+  "description": "Dana gifts",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "natives": "^1.1.6"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -19,7 +21,7 @@
     "gulp-js-minify": "0.0.3",
     "gulp-livereload": "^3.8.1",
     "gulp-minify-css": "^1.2.4",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-server-livereload": "^1.9.2",
     "gulp-sftp": "^0.1.5",
     "gulp-sourcemaps": "^2.6.4",

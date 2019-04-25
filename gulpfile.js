@@ -133,10 +133,17 @@ gulp.task("jade", function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task("html", function() {
+  return gulp
+    .src("src/*.html")
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.stream());
+});
+
 gulp.task("watch", function() {
   livereload.listen({ basePath: "dist" });
   gulp.watch("src/scss/**/*.scss", ["css"]);
-  gulp.watch("src/jade/**/*", ["jade"]);
+  gulp.watch("src/*.html", ["html"]);
   gulp.watch("src/js/**/*", ["js"]);
   // gulp.watch('src/images/icons/*.svg', ['sprite']);
   gulp.watch("src/images/*", ["images"]);
