@@ -160,14 +160,14 @@ gulp.task("ftp-deploy-watch", function() {
 
     return gulp.src([event.path], { base: "dist/", buffer: false }).pipe(
       sftp({
-        // host: '35.225.43.3',
-        // user: 'animatronblog',
-        // pass: 'ewv59H2F06qgCgq',
-        // port: 48412,
-        // remotePath: 'public/blog/frontend/',
+        host: "div00.ftp.tools",
+        user: "div00_dana",
+        pass: "0x4IH1Lk5Xpx",
+        port: 21,
+        remotePath: "/"
         // key: './vultr_id_rs',
-        // callback: function () {
-        //   livereload.reload()
+        // callback: function() {
+        //   livereload.reload();
         // }
       })
     );
