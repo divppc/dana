@@ -192,10 +192,13 @@ section.steps {
     &.process {
       display: flex;
       flex-direction: column;
-      text-align: left;
       align-items: center;
       justify-content: center;
       text-transform: uppercase;
+
+      @media (min-width: $laptop) {
+        text-align: left;
+      }
 
       h1 {
         font-size: 18px;
